@@ -1,0 +1,51 @@
+                <!-- 面包屑 -->
+                <ol class="breadcrumb">
+                    <li><a href="javascript:;">讲师管理</a></li>
+                    <li class="active">{{tc_edit}}</li>
+                </ol>
+                <div class="teacher-add">
+                    <form action="" class="form-horizontal col-md-offset-2">
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">姓名</label>
+                            <div class="col-md-4">
+                                <input type="text" ng-model="info.tc_name" class="form-control input-sm" placeholder="讲师名称"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">入职时间</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control input-sm"
+                                       ng-model="info.tc_join_date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">类型</label>
+                            <div class="col-md-2">
+                                <select name="" ng-model="info.tc_type" class="form-control input-sm">
+                                    <option value="0">讲师</option>
+                                    <option value="1">管理员</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">性别</label>
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                <!--  radio 需要手动指定一个value值  -->
+                                    <input name="tc_gender" ng-model="info.tc_gender" type="radio"  value="1"> 男
+                                </label>
+                                <label class="radio-inline">
+                                    <input  name="tc_gender" ng-model="info.tc_gender" type="radio" value="0"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-7">
+                                <a  class="btn btn-success btn-sm pull-right"
+                                ng-click="edit()"> 编辑 </a>
+                            </div>                          
+                        </div>
+                    </form>
+                </div>
