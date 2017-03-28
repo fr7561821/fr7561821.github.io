@@ -7,7 +7,7 @@ angular.module('login',[])
         $scope.password = '';
         console.log(location.hash);
         $scope.login= function () {
-            $http({
+            $http.jsonp({
                 url:'http://api.botue.com/login',
                 method:'post',
                 data:'tc_name='+$scope.username+'&tc_pass='+$scope.password,
